@@ -1,6 +1,7 @@
 = pintlabs
 
-Description goes here.
+Rubygem for accessing the new Pintlabs BreweryDB V2.  The goal here is to make the whole process of querying the
+API as easy as drinking a Racer X for ruby devs.
 
 == Contributing to pintlabs
  
