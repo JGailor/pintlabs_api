@@ -1,6 +1,6 @@
 module Pintlabs
   class API
-    def self.index(resource, options = {})
+    def self.get(resource, options = {})
       options.merge!({"key" => Pintlabs.config.api_key})
       HTTParty.get(Pintlabs.config.base_uri + resource, :query => options).tap do |response|
         if response["status"] != "success"

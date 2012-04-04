@@ -2,11 +2,12 @@ module Pintlabs
   class Beer < Pintlabs::API
     attr_accessor :labels, :style, :available, :glass
 
-    def self.index(options = {})
-      result = super("/beers", options)
-      if result["status"] == "success"
-        result["data"].map {|result_data| Beer.new(result_data)}
-      end
+    def self.beers(options = {})
+      get("/beers", options)["data"].map {|data| Beer.new(data)}
+    end
+
+    def self.beer(id, options = {})
+      Beer.new(get("/beer/#{id}", options)["data"])
     end
 
     def initialize(attrs = {})
