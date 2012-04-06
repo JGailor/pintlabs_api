@@ -131,9 +131,8 @@ describe Pintlabs::Beer do
     context "Pintlabs::Beer::beer" do
       it "should return a beer based on an id" do
         Pintlabs::API.should_receive(:get).with("/beer/1", {}).and_return(single_response_data)
-
+        Pintlabs::Beer.should_receive(:new).with(single_response_data["data"])
         beer = Pintlabs::Beer.beer(1)
-        beer.servingTemperatureDisplay.should == "Cool - (8-12C/45-54F)"
       end
     end
   end

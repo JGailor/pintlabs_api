@@ -5,6 +5,8 @@ require 'pintlabs/style'
 require 'pintlabs/availability'
 require 'pintlabs/glass'
 require 'pintlabs/beer'
+require 'pintlabs/images'
+require 'pintlabs/brewery'
 require 'httparty'
 
 module Pintlabs
