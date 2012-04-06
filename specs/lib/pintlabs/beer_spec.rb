@@ -1,7 +1,5 @@
 # encoding: utf-8
-
 require File.expand_path("lib/pintlabs")
-require File.expand_path("lib/pintlabs/beer")
 
 describe Pintlabs::Beer do
   let(:list_response_data) {

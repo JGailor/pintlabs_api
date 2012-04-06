@@ -7,6 +7,7 @@ require 'pintlabs/glass'
 require 'pintlabs/beer'
 require 'pintlabs/images'
 require 'pintlabs/brewery'
+require 'pintlabs/event'
 require 'httparty'
 
 module Pintlabs
